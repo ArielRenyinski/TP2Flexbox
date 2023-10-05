@@ -7,159 +7,141 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <link href="public/css/main.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>TP2 Flexbox</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+      <link href="public/css/main.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-<body>
-  <!--INICIO NAV BOOTSTRAP-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Servicios Web</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dominio</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Encuentra tu nombre en Internet</a></li>
-                <li><a class="dropdown-item" href="#">Dominios .COM.AR y .AR</a></li>
-                <li><a class="dropdown-item" href="#">Registro privado de dominio</a></li>
-                <li><a class="dropdown-item" href="#">Whois</a></li>
+  <body>
+      <header> 
+        <!----------------------------------INICIO NAV BOOTSTRAP----------------------------------------------------------------------->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Servicios Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dominio</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Encuentra tu nombre en Internet</a></li>
+                    <li><a class="dropdown-item" href="#">Dominios .COM.AR y .AR</a></li>
+                    <li><a class="dropdown-item" href="#">Registro privado de dominio</a></li>
+                    <li><a class="dropdown-item" href="#">Whois</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hosting</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Web Hosting</a></li>
+                    <li><a class="dropdown-item" href="#">Windows Hosting</a></li>
+                    <li><a class="dropdown-item" href="#">Cloud Hosting</a></li>
+                    <li><a class="dropdown-item" href="#">Wordpress Hosting</a></li>
+                    <li><a class="dropdown-item" href="#">Hosting para Revendedores</a></li>
+                    <li><a class="dropdown-item" href="#">Servidores dedicados</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Página Web & Tienda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SSL</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Más...</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Correo Profesional</a></li>
+                    <li><a class="dropdown-item" href="#">Chat de atención en linea</a></li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hosting</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Web Hosting</a></li>
-              <li><a class="dropdown-item" href="#">Windows Hosting</a></li>
-              <li><a class="dropdown-item" href="#">Cloud Hosting</a></li>
-              <li><a class="dropdown-item" href="#">Wordpress Hosting</a></li>
-              <li><a class="dropdown-item" href="#">Hosting para Revendedores</a></li>
-              <li><a class="dropdown-item" href="#">Servidores dedicados</a></li>
-            </ul>
-          </li>
-
-
-          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Página Web & Tienda</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="#">SSL</a>
-          </li>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Más...</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Correo Profesional</a></li>
-            <li><a class="dropdown-item" href="#">Chat de atención en linea</a></li>
-          </ul>
-          </li>
-       
-          </ul>
-          <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Encontrá tu Dominio" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  <!--FIN NAV BOOTSTRAP-->
-
-  <main  class="flex-grow-1">
-      <header>
-        <div class="conocenos">
-          <div class="text_conocenos">
-            <h1 class="titulo_conocenos">CONOCÉ SERVICIOS WEB</h1>
-            <p class="parrafo_conocenos">Nos apasiona la tecnología y logramos los objetivos más audaces. Aplicamos
-              siempre la inteligencia y la pasión por hacer lo correcto. Está en nuestro ADN
-            mejorar lo inmejorable y encontrar soluciones simples a problemas complejos.
-            Nuestro crecimiento no tiene techo y siempre vamos por más.</p>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Encontrá tu Dominio" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </div>
           </div>
-        </div>
+        </nav>
+        <!----------------------------------FIN NAV BOOTSTRAP-------------------------------------------------------------------------->
       </header> 
-
-      <!------------------------INICIO SECCION NOSOTROS------------------------------------------------------------------>
-
-      <section id="nosotros">
-
-        <h2 class="titulo_seccion_nosotros">Somos la empresa de web hosting y 
-          <br> dominios más grande de Latinoamérica</h2>
-
-        <div class="contenedor_secciones">    
-          
-          <div class="contenedor_seccion">
-            <img src="public/img/quienessomos-nuestro-lanzamiento.png">
-            <h3 class="titulo_seccion">Nuestros Comienzos</h3>
-            <p class="parrafo_seccion">ServiciosWeb comenzó como un gran sueño en el año 2002, en la ciudad de Rosario, Argentina, con el objetivo de crear una Internet accesible para todos.
-              Veinte años después, seguimos trabajando en simplificar los procesos y potenciar el crecimiento individual de nuestros clientes.</p>
+   
+      <main  class="flex-grow-1">
+        <!--------------------------INICIO SECCION CONOCENOS----------------------------------------------------------------->
+        <section>
+          <div class="conocenos">
+            <div class="text_conocenos">
+              <h1 class="titulo_conocenos">CONOCÉ SERVICIOS WEB</h1>
+              <p class="parrafo_conocenos">Nos apasiona la tecnología y logramos los objetivos más audaces. Aplicamos
+                siempre la inteligencia y la pasión por hacer lo correcto. Está en nuestro ADN
+                mejorar lo inmejorable y encontrar soluciones simples a problemas complejos.
+                Nuestro crecimiento no tiene techo y siempre vamos por más.</p>
+            </div>
           </div>
- 
-          <div class="contenedor_seccion">
-            <img src="public/img/quienessomos-nuestro-lugar.png">
-            <h3 class="titulo_seccion">Nuestro lugar en el mundo</h3>
-            <p class="parrafo_seccion">Hoy somos la empresa de web hosting y registro de dominios más grande de habla hispana, con más del 70% del mercado latinoamericano.
-              A nivel mundial, nos encontramos entre las 25 entidades registrantes de más rápido crecimiento.</p>
+        </section>
+        <!--------------------------FIN SECCION CONOCENOS-------------------------------------------------------------------->
+        
+        <!--------------------------INICIO SECCION NOSOTROS------------------------------------------------------------------>
+        <section id="nosotros">
+            <h2 class="titulo_seccion_nosotros">Somos la empresa de web hosting y 
+              <br> dominios más grande de Latinoamérica</h2>
+            <div class="contenedor_secciones">    
+              <div class="contenedor_seccion">
+                <img src="public/img/img_nosotros/quienessomos-nuestro-lanzamiento.png" alt=""/>
+                <h3 class="titulo_seccion">Nuestros Comienzos</h3>
+                <p class="parrafo_seccion">ServiciosWeb comenzó como un gran sueño en el año 2002, en la ciudad de Rosario, Argentina, con el objetivo de crear una Internet accesible para todos.
+                  Veinte años después, seguimos trabajando en simplificar los procesos y potenciar el crecimiento individual de nuestros clientes.</p>
+              </div>
+              <div class="contenedor_seccion">
+                <img src="public/img/img_nosotros/quienessomos-nuestro-lugar.png" alt=""/>
+                <h3 class="titulo_seccion">Nuestro lugar en el mundo</h3>
+                <p class="parrafo_seccion">Hoy somos la empresa de web hosting y registro de dominios más grande de habla hispana, con más del 70% del mercado latinoamericano.
+                  A nivel mundial, nos encontramos entre las 25 entidades registrantes de más rápido crecimiento.</p>
+              </div>
+              <div class="contenedor_seccion contenedor_seccion_ultima">
+                <img src="public/img/img_nosotros/quienessomos-nuestro-cliente.png" alt=""/>
+                <h3 class="titulo_seccion">Nuestro foco es el cliente</h3>
+                <p class="parrafo_seccion">La transformación constante, la evolución del negocio, la escucha activa de las demandas nacientes y la adaptación a los cambios, que cada vez se imponen más vertiginosamente en el mundo actual, son nuestro principal desafío. Buscamos lograr mejores resultados, motivarnos y tener energía.</p>
+              </div>
+            </div>
+        </section>
+        <!--------------------------FIN SECCION NOSOTROS--------------------------------------------------------------------->
+
+        <!--------------------------INICIO SECCION TRABAJOS REALIZADOS------------------------------------------------------->
+        <section id="trabajos_realizados">
+          <div class="texto_trabajos_realizados">
+              <h2 class="titulo_seccion_trabajos_realizados">Nuestros clientes</h2>
+              <p class="parrafo_trabajos_realizados">Nos enorgullece contar con clientes leales, fruto de años de compromiso y dedicación. Cada relación trasciende lo comercial, reflejando nuestra búsqueda de excelencia. Agradecemos la confianza que nos han brindado, siendo parte esencial de nuestro éxito. Con entusiasmo, planeamos seguir elevando el estándar de calidad en futuros proyectos.
+                Gracias por ser protagonistas en nuestra historia de éxito.</p>
           </div>
-      
-          <div class="contenedor_seccion contenedor_seccion_ultima">
-            <img src="public/img/quienessomos-nuestro-cliente.png">
-            <h3 class="titulo_seccion">Nuestro foco es el cliente</h3>
-            <p class="parrafo_seccion">La transformación constante, la evolución del negocio, la escucha activa de las demandas nacientes y la adaptación a los cambios, que cada vez se imponen más vertiginosamente en el mundo actual, son nuestro principal desafío. Buscamos lograr mejores resultados, motivarnos y tener energía.</p>
+          <div class="contenedor_trabajos_realizados">
+            <img src="public/img/img_portafolio/balletschool.jpeg"  alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/blackpaper.jpeg"    alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/directeur.jpeg"     alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/remarkable.jpeg"    alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/tatto.jpeg"         alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/timetotravel.jpeg"  alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/truested.jpeg"      alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/footbal.jpeg"       alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/justicia.jpeg"      alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/kapan.jpeg"         alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/nail.jpeg"          alt="" class="img_portfolio"/>
+            <img src="public/img/img_portafolio/munchel.jpeg"       alt="" class="img_portfolio"/>
           </div>
+        </section>
+        <!--------------------------FIN SECCION TRABAJOS REALIZADOS---------------------------------------------------------->
+      </main>
 
-        </div>
-      </section>
-      
-      <!------------------------FIN SECCION NOSOTROS-------------------------------------------------------------------->
-
-      <!------------------------INICIO SECCION TRABAJOS REALIZADOS------------------------------------------------------>
-      <section id="trabajos_realizados">
-        <div class="texto_trabajos_realizados">
-          <h2 class="titulo_seccion_trabajos_realizados">Nuestros clientes</h2>
-          <p class="parrafo_trabajos_realizados">Nos enorgullece contar con clientes leales, fruto de años de compromiso y dedicación. Cada relación trasciende lo comercial, reflejando nuestra búsqueda de excelencia. Agradecemos la confianza que nos han brindado, siendo parte esencial de nuestro éxito. Con entusiasmo, planeamos seguir elevando el estándar de calidad en futuros proyectos.
-            Gracias por ser protagonistas en nuestra historia de éxito.</p>
-        </div>
-        <div class="contenedor_trabajos_realizados">
-          <img src="public/img/img_portafolio/balletschool.jpeg"  alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/blackpaper.jpeg"    alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/directeur.jpeg"     alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/remarkable.jpeg"    alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/tatto.jpeg"         alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/timetotravel.jpeg"  alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/truested.jpeg"      alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/footbal.jpeg"       alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/justicia.jpeg"      alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/kapan.jpeg"         alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/nail.jpeg"          alt="" class="img_portfolio"/>
-          <img src="public/img/img_portafolio/munchel.jpeg"       alt="" class="img_portfolio"/>
-        </div>
-      </section>
-      <!------------------------FIN SECCION TRABAJOS REALIZADOS--------------------------------------------------------->
-  </main>
-
-  <footer>
-    <span>2023 Servicios Web - Todos los derechos reservados. Términos y condiciones. Políticas de privacidad.</span>
-  </footer>
-
-
-
-
-
-
-
-
-
-
-</body>
+      <!----------------------------INICIO FOOTER---------------------------------------------------------------------------->
+      <footer>
+        <span>2023 Servicios Web - Todos los derechos reservados. Términos y condiciones. Políticas de privacidad.</span>
+      </footer>
+      <!----------------------------FIN FOOTER------------------------------------------------------------------------------->
+  </body>
 </html>

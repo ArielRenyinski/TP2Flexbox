@@ -4,6 +4,7 @@
       AGUILERA, PAULA
       RENYINSKI, LUIS ARIEL
 */
+
 *{
     margin: 0;
     padding: 0;
@@ -11,11 +12,11 @@
     box-sizing: border-box;
 }
 
-/************************INICIO ESTILOS DEL NAV***********************************************/
+/************************************INICIO ESTILOS DEL NAV***************************************/
 .navbar{
     background:  rgba(12 14 29 /.9) !important;  /*Color background del NAV*/
-    position: fixed;
-    width: 100%;
+    position: fixed;                               /*Position Fixed para que el NAV quede fijo y se pueda ver en todo momento en la parte superior al hacer scrool*/
+    width: 100%;                                   /*Al poner "Position: Fixed" hay que indicarle un ancho del 100%*/
 }
   .nav-link{
     color: rgb(245, 245, 245) !important; /*Color del texto en el nav*/
@@ -32,21 +33,23 @@
 .form-control{
     background: rgb(228, 228, 228); /*Color de la casilla del formulario busqueda*/
 }
-
-/**********************************FIN ESTILOS DEL NAV****************************************************/
-
-
-
+.navbar-toggler{    
+    background: rgb(206, 206, 206);
+}
+/************************************FIN ESTILOS DEL NAV******************************************/
 body{
-    min-height: 100vh; /*Altura para mantener al footer al final*/
+    min-height: 100vh; /*Altura minima para mantener al footer al final*/
     display: flex; 
     flex-direction: column;
 }
 main {
     flex-grow: 1; /*factor de crecimiento 1.*/
 }
+img{
+    padding-bottom: 1em;
+}
 
-/*******************************INICIO ESTILOS HEADER*****************************************/
+/************************************INICIO SECCION CONOCENOS*************************************/
 .text_conocenos{
     color: #ebe9e9;
     width:50%;
@@ -58,6 +61,7 @@ main {
 .parrafo_conocenos{
     font-size: 18px;
     color: #fff;
+    font-style: italic;
 }
 .conocenos{
     height: 100vh;
@@ -69,14 +73,9 @@ main {
     background-position: center;
     background-image: linear-gradient(to bottom, rgba(8, 9, 4, 0.8), rgb(4 4 9/ .9)),url(https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/que-es-la-ergonomia.jpg.webp?itok=ekyIN5Te);
 }
-img{
-    padding-bottom: 1em;
-}
+/************************************FIN SECCION CONOCENOS****************************************/
 
-/***********************FIN ESTILOS HEADER*************************************************/
-
-
-/**********************INICIO SECCION NOSOTROS*********************************************/
+/************************************INICIO SECCION NOSOTROS**************************************/
 #nosotros{
     padding: 60px  0 10px 0;
     background: #f1f2fe;
@@ -106,9 +105,9 @@ img{
     font-size: 24px;
     font-weight: 500;
 }
-/********************************FIN SECCION NOSOTROS****************************/
+/************************************FIN SECCION NOSOTROS*****************************************/
 
-/********************************INICIO SECCION TRABAJOS REALIZADOS**************/
+/************************************INICIO SECCION TRABAJOS REALIZADOS***************************/
 #trabajos_realizados{
     min-height: 100vh;
     background: rgb(9, 11, 22);
@@ -141,33 +140,32 @@ img{
     justify-content: center;
     padding-bottom: 3em;
 }
-/********************************FIN SECCION TRABAJOS REALIZADOS******************************/
+/************************************FIN SECCION TRABAJOS REALIZADOS******************************/
 
-/********************************INICIO ESTILOS FOOTER****************************************/
+/************************************INICIO ESTILOS FOOTER****************************************/
 footer{
     display: flex;
-    justify-content: center; /*Centrado*/
-    align-content: center;  /*Centrado*/
-    padding-top: 1rem; /*Espacio superior en el footer*/
-    padding-bottom: 1rem; /*Espacio de abajo en el footer*/
-    background: #06070d ;  /*Color de fondo del Footer*/
-    color: white; /*Color del texto*/
+    justify-content: center;         /*Centrado*/
+    align-content: center;           /*Centrado*/
+    padding-top: 1rem;               /*Espacio superior en el footer*/
+    padding-bottom: 1rem;            /*Espacio de abajo en el footer*/
+    background: #06070d ;          /*Color de fondo del Footer*/
+    color: white;                  /*Color del texto*/
 }
 span{
     font-size: 12px;
 }
+/************************************FIN ESTILOS FOOTER*******************************************/
 
-/*******************************FIN ESTILOS FOOTER********************************************/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/************************************INICIO VISTA CELULAR*****************************************/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
-
-
-/************************************INICIO VISTA CELULAR*************************************/
 @media screen and (max-width: 767px) {
-    .navbar-toggler{    
-        background: rgb(206, 206, 206);
+    /********************************INICIO SECCION CONOCENOS*************************************/
+    .conocenos{
+        background-image: linear-gradient(to bottom, rgba(8, 9, 4, 0.8), rgba(10, 10, 26, 0.9)),url(https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/que-es-la-ergonomia.jpg.webp?itok=ekyIN5Te);
     }
-
-    /********************************INICIO ESTILOS HEADER************************************/
     .text_conocenos{
         color: #eaeaea;
         width:70%;
@@ -182,11 +180,13 @@ span{
         padding-right: 1rem;
     }
     .parrafo_conocenos{
-        font-size: 16px;
+        font-size: 18px;
+        font-style: italic;
+        padding-top: 1.4em;
     }
-    /********************************FIN ESTILOS HEADER**************************************/
+    /********************************FIN SECCION CONOCENOS****************************************/
 
-    /********************************INICIO SECCION NOSOTROS*********************************/
+    /********************************INICIO SECCION NOSOTROS**************************************/
     #nosotros{
         padding: 40px  20px 5px 20px;
         background: #f1f2fe;
@@ -216,9 +216,9 @@ span{
          font-size: 14px;
          text-align: center;
      }
-    /********************************FIN SECCION NOSOTROS*******************************/
+    /********************************FIN SECCION NOSOTROS*****************************************/
 
-    /********************************INICIO SECCION TRABAJOS REALIZADOS*****************/
+    /********************************INICIO SECCION TRABAJOS REALIZADOS***************************/
     .titulo_seccion_trabajos_realizados{
         font-size: 30px;
         padding-top: 2em;
@@ -234,15 +234,17 @@ span{
         margin: 1em;
         border-radius: 8px;
     }
-    /********************************FIN SECCION TRABAJOS REALIZADOS********************/
+    /********************************FIN SECCION TRABAJOS REALIZADOS******************************/
 
-    /********************************INICIO ESTILOS FOOTER******************************/
+    /********************************INICIO ESTILOS FOOTER****************************************/
     footer{
         padding-left: 2em;
         padding-right: 2em;
         text-align: center;
     }
-    /********************************FIN ESTILOS FOOTER********************************/
+    /********************************FIN ESTILOS FOOTER*******************************************/
 
 }
-/************************************FIN VISTA CELULAR*************************************/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/************************************FIN VISTA CELULAR********************************************/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/

@@ -1,0 +1,194 @@
+/*
+    TP_2: FLEXBOX
+    INTEGRANTES DEL GRUPO:
+      AGUILERA, PAULA
+      RENYINSKI, LUIS ARIEL
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+/*INICIO ESTILOS DEL NAV*/
+.navbar{
+    background:  rgba(12 14 29 /.9) !important;  /*Color background del NAV*/
+    position: fixed;
+    width: 100%;
+}
+  .nav-link{
+    color: rgb(245, 245, 245) !important; /*Color del texto en el nav*/
+}
+.navbar-brand{
+    color: #fff !important; /*Color del texto Navbar (izquierda superior del menu)*/
+}
+.navbar-brand:hover{
+    color: #fff !important; /*Colo del texto Navbar (al tener el mouse arriba),(izquierda superior del menu) */
+}
+.dropdown-menu{
+    background: rgb(228, 228, 228); /*Color de la casilla que se abre al seleccionar una opcion del menu*/
+}
+.form-control{
+    background: rgb(228, 228, 228); /*Color de la casilla del formulario busqueda*/
+}
+
+/*FIN ESTILOS DEL NAV*/
+
+
+main {
+    flex-grow: 1; /*factor de crecimiento 1.*/
+}
+body{
+    min-height: 100vh; /*Altura para mantener al footer al final*/
+    display: flex; 
+    flex-direction: column;
+}
+
+/********************INICIO ESTILOS HEADER*****************************/
+.text_conocenos{
+    color: #ebe9e9;
+    width:50%;
+    text-align: center;
+}
+.titulo_conocenos{
+    font-size: 40px;
+}
+.parrafo_conocenos{
+    font-size: 18px;
+    color: #fff;
+}
+.conocenos{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(8, 9, 4, 0.8), rgb(4 4 9/ .9)),url(https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/que-es-la-ergonomia.jpg.webp?itok=ekyIN5Te);
+}
+img{
+    padding-bottom: 1em;
+}
+
+/********************INICIO ESTILOS HEADER*****************************/
+
+
+/*INICIO SECCION NOSOTROS*/
+#nosotros{
+    padding: 60px  0 10px 0;
+    background: #f1f2fe;
+}
+.titulo_seccion_nosotros{
+    text-align: center;
+    font-size: 48px;
+    line-height: 1.3;
+}
+.contenedor_secciones{
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+}
+.contenedor_seccion{
+    text-align: justify;
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    align-items:center;
+    justify-content: center; 
+}
+.titulo_seccion{
+    font-size: 24px;
+    font-weight: 500;
+}
+/*FIN SECCION NOSOTROS*/
+
+/*INICIO ESTILOS FOOTER*/
+footer{
+    display: flex;
+    justify-content: center; /*Centrado*/
+    align-content: center;  /*Centrado*/
+    padding-top: 1rem; /*Espacio superior en el footer*/
+    padding-bottom: 1rem; /*Espacio de abajo en el footer*/
+    background: #080912 ;  /*Color de fondo del Footer*/
+    color: white; /*Color del texto*/
+}
+span{
+    font-size: 12px;
+}
+
+/*FIN ESTILOS FOOTER*/
+
+
+
+/************************************INICIO VISTA CELULAR*************************************/
+@media screen and (max-width: 767px) {
+    .navbar-toggler{    
+        background: rgb(206, 206, 206);
+    }
+
+    /********************************INICIO ESTILOS HEADER*****************************/
+    .text_conocenos{
+        color: #eaeaea;
+        width:70%;
+        text-align: center;
+    }
+    .titulo_conocenos{
+        font-size:30px;
+    }
+    .titulo_seccion_nosotros{
+        font-size: 24px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .parrafo_conocenos{
+        font-size: 16px;
+    }
+    /********************************FIN ESTILOS HEADER*********************************/
+
+    /********************************INICIO SECCION NOSOTROS****************************/
+    #nosotros{
+        padding: 40px  20px 5px 20px;
+        background: #f1f2fe;
+    }
+    .titulo_seccion_nosotros{
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .contenedor_secciones{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+     }
+     .contenedor_seccion{
+         padding: 1.3em;
+         border-radius: 16px;
+         background: rgb(206, 206, 206); 
+         margin-bottom: .8em;
+     }
+     .contenedor_seccion_ultima{
+        margin-bottom: 4em;
+     }
+     .titulo_seccion{
+         font-size: 18px;
+     }
+     .parrafo_seccion{
+         font-size: 14px;
+         text-align: center;
+     }
+    /********************************FIN SECCION NOSOTROS*******************************/
+
+    /********************************INICIO ESTILOS FOOTER******************************/
+    footer{
+        padding-left: 2em;
+        padding-right: 2em;
+        text-align: center;
+    }
+    /********************************FIN ESTILOS FOOTER********************************/
+
+}
+/************************************FIN VISTA CELULAR*************************************/

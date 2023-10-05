@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-/*INICIO ESTILOS DEL NAV*/
+/************************INICIO ESTILOS DEL NAV***********************************************/
 .navbar{
     background:  rgba(12 14 29 /.9) !important;  /*Color background del NAV*/
     position: fixed;
@@ -33,19 +33,20 @@
     background: rgb(228, 228, 228); /*Color de la casilla del formulario busqueda*/
 }
 
-/*FIN ESTILOS DEL NAV*/
+/**********************************FIN ESTILOS DEL NAV****************************************************/
 
 
-main {
-    flex-grow: 1; /*factor de crecimiento 1.*/
-}
+
 body{
     min-height: 100vh; /*Altura para mantener al footer al final*/
     display: flex; 
     flex-direction: column;
 }
+main {
+    flex-grow: 1; /*factor de crecimiento 1.*/
+}
 
-/********************INICIO ESTILOS HEADER*****************************/
+/*******************************INICIO ESTILOS HEADER*****************************************/
 .text_conocenos{
     color: #ebe9e9;
     width:50%;
@@ -72,10 +73,10 @@ img{
     padding-bottom: 1em;
 }
 
-/********************INICIO ESTILOS HEADER*****************************/
+/***********************FIN ESTILOS HEADER*************************************************/
 
 
-/*INICIO SECCION NOSOTROS*/
+/**********************INICIO SECCION NOSOTROS*********************************************/
 #nosotros{
     padding: 60px  0 10px 0;
     background: #f1f2fe;
@@ -105,23 +106,58 @@ img{
     font-size: 24px;
     font-weight: 500;
 }
-/*FIN SECCION NOSOTROS*/
+/********************************FIN SECCION NOSOTROS****************************/
 
-/*INICIO ESTILOS FOOTER*/
+/********************************INICIO SECCION TRABAJOS REALIZADOS**************/
+#trabajos_realizados{
+    min-height: 100vh;
+    background: rgb(9, 11, 22);
+}
+.texto_trabajos_realizados{
+    text-align: center;
+}
+ .titulo_seccion_trabajos_realizados{
+    font-size: 48px;
+    line-height: 1.3;
+    padding-top: 1em;
+    color: #dddddd;
+}
+.parrafo_trabajos_realizados{
+    font-size: 20px;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    color: #dddddd;
+    margin: 2em 10em;
+} 
+.img_portfolio{
+    width: 150px;
+    height: 300px;
+    margin: 1em;
+    border-radius: 8px;
+}
+.contenedor_trabajos_realizados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 3em;
+}
+/********************************FIN SECCION TRABAJOS REALIZADOS******************************/
+
+/********************************INICIO ESTILOS FOOTER****************************************/
 footer{
     display: flex;
     justify-content: center; /*Centrado*/
     align-content: center;  /*Centrado*/
     padding-top: 1rem; /*Espacio superior en el footer*/
     padding-bottom: 1rem; /*Espacio de abajo en el footer*/
-    background: #080912 ;  /*Color de fondo del Footer*/
+    background: #06070d ;  /*Color de fondo del Footer*/
     color: white; /*Color del texto*/
 }
 span{
     font-size: 12px;
 }
 
-/*FIN ESTILOS FOOTER*/
+/*******************************FIN ESTILOS FOOTER********************************************/
 
 
 
@@ -131,7 +167,7 @@ span{
         background: rgb(206, 206, 206);
     }
 
-    /********************************INICIO ESTILOS HEADER*****************************/
+    /********************************INICIO ESTILOS HEADER************************************/
     .text_conocenos{
         color: #eaeaea;
         width:70%;
@@ -148,9 +184,9 @@ span{
     .parrafo_conocenos{
         font-size: 16px;
     }
-    /********************************FIN ESTILOS HEADER*********************************/
+    /********************************FIN ESTILOS HEADER**************************************/
 
-    /********************************INICIO SECCION NOSOTROS****************************/
+    /********************************INICIO SECCION NOSOTROS*********************************/
     #nosotros{
         padding: 40px  20px 5px 20px;
         background: #f1f2fe;
@@ -181,6 +217,24 @@ span{
          text-align: center;
      }
     /********************************FIN SECCION NOSOTROS*******************************/
+
+    /********************************INICIO SECCION TRABAJOS REALIZADOS*****************/
+    .titulo_seccion_trabajos_realizados{
+        font-size: 30px;
+        padding-top: 2em;
+    }
+    .parrafo_trabajos_realizados{
+        font-size: 16px;
+        color: #dddddd;
+        margin: 1em 5em;
+    } 
+    .img_portfolio{
+        width: 150px;
+        height: 300px;
+        margin: 1em;
+        border-radius: 8px;
+    }
+    /********************************FIN SECCION TRABAJOS REALIZADOS********************/
 
     /********************************INICIO ESTILOS FOOTER******************************/
     footer{
